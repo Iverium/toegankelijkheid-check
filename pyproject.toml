@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toegankelijkheid-check"
+version = "1.0.0"
+description = "Automatic WCAG 2.1/2.2 accessibility check for one web page (Dutch reports)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Iverium Software"}]
+keywords = ["accessibility", "wcag", "a11y", "toegankelijkheid"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Natural Language :: Dutch",
+    "Topic :: Internet :: WWW/HTTP :: Site Management",
+]
+
+[project.urls]
+Homepage = "https://www.iverium.nl/toegankelijkheid-check"
+Source = "https://github.com/Iverium/toegankelijkheid-check"
+
+[project.scripts]
+toegankelijkheid-check = "toegankelijkheid_check.__main__:main"
+
+[tool.setuptools]
+packages = ["toegankelijkheid_check"]
